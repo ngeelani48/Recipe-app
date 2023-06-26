@@ -79,3 +79,6 @@ group :test do
 end
 
 gem 'rails-controller-testing'
+
+# Bootstrap testing libraries
+gem 'bootstrap', '~> 5.1', '>= 5.1.3'
