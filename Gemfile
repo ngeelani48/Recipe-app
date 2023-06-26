@@ -64,6 +64,13 @@ group :development do
   # gem "spring"
 end
 
+# Rubocop [https://rubocop.org
+gem 'rubocop', '>= 1.0', '< 2.0'
+
+# devise
+gem 'devise'
+
+# RSpec and Capybara testing libraries
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
@@ -71,8 +78,4 @@ group :test do
   gem 'webdrivers'
 end
 
-# Rubocop [https://rubocop.org
-gem 'rubocop', '>= 1.0', '< 2.0'
-
-# devise
-gem 'devise'
+gem 'rails-controller-testing'
