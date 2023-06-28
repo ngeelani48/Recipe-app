@@ -1,6 +1,5 @@
 <div class="nav-group">
     <%= link_to "Recipes", new_recipe_path, class: "btn" %>
-    <%= link_to "Recipes", new_recipe_path, class: "btn" %>
+   <%= link_to "Foods", recipe_foods_path(@recipes.ids), class: "btn" %>
     <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn" %>
-
 </div>

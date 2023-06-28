@@ -1,0 +1,22 @@
+<%= form_with(model: @food, url: root_path, method: :post, scope: :food) do |form| %>
+
+  <div>
+    <div class="field">
+      <%= form.label :name %><br />
+      <%= form.text_field :name, autofocus: true, autocomplete: "name" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :measurement_unit %><br />
+      <%= form.text_field :measurement_unit, autofocus: true, autocomplete: "measurement_unit" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :price %><br />
+      <%= form.number_field :price, autofocus: true, autocomplete: "price" %>
+    </div>
+
+    <%= form.submit "Save foods" %>
+    <%= link_to "Cancel", root_path, class: "" %>
+  </div>
+<% end %>
