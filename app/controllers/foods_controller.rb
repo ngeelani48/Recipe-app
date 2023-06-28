@@ -1,5 +1,4 @@
 class FoodsController < ApplicationController
-
   def index
     @foods = Food.all
   end
@@ -14,11 +13,10 @@ class FoodsController < ApplicationController
     end
   end
 
-  def edit
-    
-  end
+  def edit; end
 
-  private 
+  private
+
   def food_params
     params.require(:food).permit(:name, :measurement_unit, :price, :quantity, current_user.id)
   end
