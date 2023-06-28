@@ -80,5 +80,8 @@ end
 
 gem 'rails-controller-testing'
 
-# Bootstrap testing libraries
+# Bootstrap libraries
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
+
+# Authorization
+gem 'cancancan'
