@@ -1,0 +1,10 @@
+<h1><%= @recipe.name %></h1>
+
+<p><strong>Preparation Time:</strong> <%= @recipe.preparation_time %> minutes</p>
+<p><strong>Cooking Time:</strong> <%= @recipe.cooking_time %> minutes</p>
+<p><strong>Description:</strong> <%= @recipe.description %></p>
+<p><strong>Public:</strong> <%= @recipe.public ? 'Yes' : 'No' %></p>
+
+<%= link_to 'Back to Recipes', recipes_path, class: 'action-button' %>
+<%= link_to 'Edit Recipe', edit_recipe_path(@recipe), class: 'action-button' %>
+<%= link_to 'Delete Recipe', @recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: 'action-button' %>
