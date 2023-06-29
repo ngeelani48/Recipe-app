@@ -4,7 +4,7 @@
 <p><strong>Cooking Time:</strong> <%= @recipe.cooking_time %> minutes</p>
 <p><strong>Description:</strong> <%= @recipe.description %></p>
 <p><strong>Public:</strong> <%= @recipe.public ? 'Yes' : 'No' %></p>
-
+<div class="recipe-actions">
 <%= link_to 'Back to Recipes', recipes_path, class: 'action-button' %>
-<%= link_to 'Edit Recipe', edit_recipe_path(@recipe), class: 'action-button' %>
-<%= link_to 'Delete Recipe', @recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: 'action-button' %>
+<%= button_to 'Delete Recipe', @recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
+</div>

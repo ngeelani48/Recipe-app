@@ -1,9 +1,9 @@
 <h1>Foods</h1>
 
 <div id="foods">
-  <button><%= link_to "Add food", new_recipe_food_path, class: "add-food" %>
-  </button>
-  <table>
+  <%= link_to "Add food", new_food_path, class: "add-food", id: "add-food-button" %>
+  
+  <table class="food-table">
     <thead>
       <tr>
         <th>Food</th>
@@ -13,8 +13,10 @@
         <th>Action</th>
       </tr>
     </thead>
-    <% @foods.each do |food| %>
-      <%= render food %>
-    <% end %>
+    <tbody>
+      <% @foods.each do |food| %>
+        <%= render food %>
+      <% end %>
+    </tbody>
   </table>
 </div>
