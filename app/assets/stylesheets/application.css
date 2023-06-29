@@ -72,6 +72,10 @@ h2 {
 }
 
 /* Styles for the recipe card */
+.add-recipe-button {
+  padding-left: 91%;
+}
+
 .recipe-card {
   border: 1px solid #ccc;
   padding: 10px;
@@ -84,6 +88,7 @@ h2 {
 
 .recipe-actions {
   margin-top: 10px;
+  display: flex;
 }
 
 .action-button {
@@ -96,7 +101,136 @@ h2 {
   border-radius: 4px;
 }
 
-/* Styles for the form */
+.delete-button {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: crimson;
+}
+
+/* Styles for the NavBar */
+
+.nav-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #337ab7;
+  padding: 0 2%;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  padding: 0 3%;
+}
+
+/* Styles for foods */
+
+.food-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.food-table th,
+.food-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.food-table th {
+  background-color: #f5f5f5;
+}
+
+.food-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.food-table tr:last-child td {
+  border-bottom: none;
+}
+
+.food-table tr:hover {
+  background-color: #ebebeb;
+}
+
+.add-food {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.add-food:hover {
+  background-color: #45a049;
+}
+
+.delete-food:hover {
+  cursor: pointer;
+  background-color: crimson;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.alert {
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.food-field {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.food-button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-link {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* .form-label {
+    margin-right: 5%;
+} */
 
 /* .form-field {
   margin-bottom: 20px;

@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
-  resources :recipes
   devise_for :users
+
+  resources :recipes, only: [:index, :show, :create, :edit, :new, :destroy] do
+    resources :recipe_foods, only: [:new, :destroy]
+  end
+  resources :shopping_lists, only: [:index]
+  resources :public_recipes, only: [:index]
+  
+  resources :recipe_foods, only: [:index, :edit, :update, :destroy, :create, :new]
+  
+  resources :foods, only: [:index, :create, :new, :edit, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   devise_scope :user do 
     authenticated :user do 

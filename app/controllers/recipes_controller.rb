@@ -30,7 +30,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
     flash[:notice] = 'Recipe deleted successfully'
-    redirect_to recipes_url
+    redirect_to recipes_path
   end
 
   private

@@ -1,0 +1,44 @@
+<section class="container">
+  <%= form_for @food, url: foods_path, local: true, data: { turbo: false }, method: :post, html: { class: "food-form" } do |form| %>
+
+    <% if @food.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+          <% @food.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <h2 class="shadow-sm p-3 bg-body-tertiary rounded text-center">Add New Food</h2>
+
+    <div class="inputs">
+
+      <div class="food-field">
+        <%= form.label :name, class: "form-label" %>
+        <%= form.text_field :name, class: "form-control", autocomplete: "off" %>
+      </div>
+
+      <div class="food-field">
+        <%= form.label :measurement_unit, class: "form-label" %>
+        <%= form.text_field :measurement_unit, class: "form-control", autocomplete: "off" %>
+      </div>
+
+      <div class="food-field">
+        <%= form.label :price, class: "form-label" %>
+        <%= form.text_field :price, class: "form-control", autocomplete: "off" %>
+      </div>
+
+      <div class="food-field">
+        <%= form.label :quantity, class: "form-label" %>
+        <%= form.text_field :quantity, class: "form-control", autocomplete: "off" %>
+      </div>
+    </div>
+
+    <div>
+      <%= form.submit "Save Food", class: "food-button" %>
+      <%= link_to "Cancel", foods_path, class: "btn btn-primary cancel-link" %>
+    </div>
+
+  <% end %>
+</section>
