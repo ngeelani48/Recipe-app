@@ -5,9 +5,9 @@
       <div>
         <%= form.number_field :quantity, placeholder: "Quantity", class: "form-input" %>
       </div>
-      <% if @present_food.present? %>
+      <% if @available_food.present? %>
   <%= form.select :food_id,
-                  options_from_collection_for_select(@present_food, "id", "name"),
+                  options_from_collection_for_select(@available_food, "id", "name"),
                   { prompt: "Select food" },
                   { class: "form-input" } %>
 <% else %>

@@ -4,7 +4,7 @@ class RecipeFoodsController < ApplicationController
   def new
     @user = current_user
     @recipe = Recipe.find_by_id(params[:recipe_id])
-    @present_food = @user.foods
+    @available_food = Foods.all
     @recipe_foods = RecipeFood.new
   end
 
@@ -30,13 +30,13 @@ class RecipeFoodsController < ApplicationController
   end
 
   def destroy
-      @recipe_food = RecipeFood.find_by_id(params[:id])
-      if @recipe_food.destroy
-        flash[:success] = 'Ingredient deleted.'
-      else
-        flash[:fail] = 'Ingredient not deleted.'
-      end
-      redirect_to recipe_foods_path(params[:recipe_id]), method: :get
+    @recipe_food = RecipeFood.find_by_id(params[:id])
+    if @recipe_food.destroy
+      flash[:success] = 'Ingredient deleted.'
+    else
+      flash[:fail] = 'Ingredient not deleted.'
+    end
+    redirect_to recipe_foods_path(params[:recipe_id]), method: :get
   end
 
   private
