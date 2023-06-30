@@ -27,14 +27,15 @@
 
 <div class="recipe-buttons">
   <% if user_signed_in? %>
-    <%= button_to "Generate Shopping List", shopping_lists_path, method: :get, class: "action-button" %>
-  <% end %>
+  <%= link_to "Generate Shopping List", shopping_lists_path(recipe_id: @recipe.id), class: "action-button", method: :post %>
+<% end %>
 
   <% if @recipe.user == @current_user %>
     <%= button_to "Add Ingredients", new_recipe_recipe_food_path(@recipe.id), method: :get, class: "action-button" %>
   <% end %>
 </div>
 
+<hr>
 <table class="recipe-table">
   <thead>
     <tr>

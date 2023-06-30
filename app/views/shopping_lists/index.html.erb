@@ -1,0 +1,39 @@
+<div class="shopping-list-wrapper">
+  <div class="shopping-list-container">
+    <h3 class="shopping-list-title">Shopping List</h3>
+    <div class="shopping-list-summary">
+      <div class="shopping-list-summary-item">
+        <% totalQuantity = 0 %>
+        <% @recipes.each do |recipe_food| %>
+          <% totalQuantity += recipe_food.quantity %>
+        <% end %>
+        <p class="shopping-list-info">Amount of food items to buy: <strong><%= totalQuantity %></strong></p>
+      </div>
+      <div class="shopping-list-summary-item">
+        <% totalValue = 0 %>
+        <% @recipes.each do |recipe_food| %>
+          <% totalValue += recipe_food.food.price * recipe_food.quantity %>
+        <% end %>
+        <p class="shopping-list-info">Total value of food needed: $<strong><%= totalValue %></strong></p>
+      </div>
+    </div>
+    <table class="shopping-list-table">
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipes.each do |recipe_food| %>
+          <tr>
+            <td class="shopping-list-table-cell"><%= recipe_food.food.name %></td>
+            <td class="shopping-list-table-cell"><%= pluralize(recipe_food.quantity, recipe_food.food.measurement_unit) %></td>
+            <td class="shopping-list-table-cell">$<%= recipe_food.food.price %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

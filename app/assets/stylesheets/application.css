@@ -285,15 +285,16 @@ h2 {
   align-content: space-between;
   justify-content: center;
   margin-bottom: 20px;
-  margin-top: 20px;
-  gap: 30%;
+  margin-top: 3rem;
+  gap: 40%;
 }
 
 .recipe-table {
   margin: 0 auto;
+  margin-top: 4rem;
   text-align: center;
   border-collapse: collapse;
-  width: 50%;
+  width: 70%;
 }
 
 .recipe-table th,
@@ -311,6 +312,51 @@ h2 {
   color: blue;
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* styles for shopping list */
+.shopping-list-wrapper {
+  width: 100%;
+}
+
+.shopping-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shopping-list-title {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.shopping-list-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.shopping-list-summary-item {
+  flex-basis: 50%;
+}
+
+.shopping-list-info {
+  font-weight: bold;
+}
+
+.shopping-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shopping-list-table th,
+.shopping-list-table td {
+  padding: 0.5rem;
+  border: 1px solid #000;
+}
+
+.shopping-list-table-cell {
+  text-align: center;
 }
 
 /* Moved here to fix linters */
