@@ -155,10 +155,6 @@ h2 {
   background-color: #f9f9f9;
 }
 
-.food-table tr:last-child td {
-  border-bottom: none;
-}
-
 .food-table tr:hover {
   background-color: #ebebeb;
 }
@@ -228,38 +224,96 @@ h2 {
   text-decoration: none;
 }
 
-/* .form-label {
-    margin-right: 5%;
-} */
+/* styling recipe details */
+.recipe-container {
+  margin-left: 2%;
+}
 
-/* .form-field {
-  margin-bottom: 20px;
-} */
-
-/* .input-field {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-} */
-
-/* .form-actions {
+.recipe-details h1 {
   text-align: center;
+}
+
+.public {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+}
+
+.public-checkbox {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-left: 10px;
+  background-color: #ccc;
+  border-radius: 20px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.public-checkbox:checked + .slider {
+  background-color: #2196f3;
+}
+
+.public-checkbox:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.recipe-label-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.recipe-buttons {
+  display: flex;
+  text-align: center;
+  align-content: space-between;
+  justify-content: center;
+  margin-bottom: 20px;
   margin-top: 20px;
-} */
+  gap: 30%;
+}
 
-/* .submit-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #337ab7;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+.recipe-table {
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.recipe-table th,
+.recipe-table td {
+  font-weight: bold;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.recipe-table th {
+  background-color: #f2f2f2;
+}
+
+.recipe-table .action-link {
+  color: blue;
+  text-decoration: underline;
   cursor: pointer;
-  width: 100%;
-} */
+}
 
-/* .submit-button:hover {
-  background-color: #23527c;
-} */
+/* Moved here to fix linters */
+.food-table tr:last-child td {
+  border-bottom: none;
+}
