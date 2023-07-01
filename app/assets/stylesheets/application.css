@@ -79,12 +79,14 @@ h2 {
 h1 {
   text-align: center;
 }
+
 .recipe-cards-container {
   margin-top: 2%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .recipe-card {
   border: 1px solid #ccc;
   padding-top: 10px;
@@ -160,6 +162,7 @@ h1 {
   gap: 20px;
   padding: 0 1%;
 }
+
 .btn,
 .user-info {
   color: #fff;
