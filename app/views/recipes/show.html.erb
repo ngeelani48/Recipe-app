@@ -6,11 +6,7 @@
     <p><strong>Description:</strong> <%= @recipe.description %></p>
     <p><strong>Public:</strong> <%= @recipe.public ? 'Yes' : 'No' %></p>
   </div>
-
-  <div class="recipe-actions">
     <%= link_to 'Back to Recipes', recipes_path, class: 'action-button' %>
-    <%= button_to 'Delete Recipe', @recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
-  </div>
 </div>
 
 <div class="public">
@@ -27,7 +23,7 @@
 
 <div class="recipe-buttons">
   <% if user_signed_in? %>
-  <%= link_to "Generate Shopping List", shopping_lists_path(recipe_id: @recipe.id), class: "action-button", method: :post %>
+  <%= link_to "Generate Shopping List", shopping_lists_path(recipe_id: @recipe.id), class: "action-button", method: :get %>
 <% end %>
 
   <% if @recipe.user == @current_user %>

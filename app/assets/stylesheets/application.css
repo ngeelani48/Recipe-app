@@ -73,13 +73,26 @@ h2 {
 
 /* Styles for the recipe card */
 .add-recipe-button {
-  padding-left: 91%;
+  padding-left: 82%;
 }
 
+h1 {
+  text-align: center;
+}
+.recipe-cards-container {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .recipe-card {
   border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  gap: 5rem;
 }
 
 .recipe-card h2 {
@@ -87,7 +100,12 @@ h2 {
 }
 
 .recipe-actions {
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.recipe-btns {
   display: flex;
 }
 
@@ -114,10 +132,22 @@ h2 {
   background-color: crimson;
 }
 
+/* style for public recipe */
+.public-recipe-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  padding-left: 10%;
+  margin-bottom: 20px;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  gap: 40%;
+}
+
 /* Styles for the NavBar */
 
 .nav-group {
-  width: 100%;
+  width: 95vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,7 +158,11 @@ h2 {
 .links {
   display: flex;
   gap: 20px;
-  padding: 0 3%;
+  padding: 0 1%;
+}
+.btn,
+.user-info {
+  color: #fff;
 }
 
 /* Styles for foods */
@@ -226,7 +260,7 @@ h2 {
 
 /* styling recipe details */
 .recipe-container {
-  margin-left: 2%;
+  margin-left: 6rem;
 }
 
 .recipe-details h1 {

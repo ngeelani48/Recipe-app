@@ -2,7 +2,7 @@
   <tr>
     <td><%= recipe_food.food.name %></td>
     <td><%= recipe_food.quantity %><%= recipe_food.food.measurement_unit %></td>
-    <td><%= recipe_food.food.price * recipe_food.quantity %></td>
+    <td>$<%= recipe_food.food.price * recipe_food.quantity %></td>
     <% if @recipe.user == current_user %>
       <td>
         <%= link_to "Edit", edit_recipe_recipe_food_path(@recipe, recipe_food), class: "edit-link" %>

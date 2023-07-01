@@ -3,17 +3,17 @@
 <div class="add-recipe-button">
   <%= link_to 'Add New Recipe', new_recipe_path, class: 'action-button' %>
 </div>
-
+<div class="recipe-cards-container">
 <% @recipes.each do |recipe| %>
   <div class="recipe-card">
+   <div class="recipe-actions">
     <h2><%= recipe.name %></h2>
-    <p><strong>Preparation Time:</strong> <%= recipe.preparation_time %> minutes</p>
-    <p><strong>Cooking Time:</strong> <%= recipe.cooking_time %> minutes</p>
-    <p><strong>Description:</strong> <%= recipe.description %></p>
-    <p><strong>Public:</strong> <%= recipe.public ? 'Yes' : 'No' %></p>
-    <div class="recipe-actions">
+    <div class="recipe-btns">
       <%= link_to 'View Recipe', recipe, class: 'action-button' %>
       <%= button_to 'Delete Recipe', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
+    </div> 
     </div>
+    <p><strong>Description:</strong> <%= recipe.description %></p> 
   </div>
 <% end %>
+</div>
