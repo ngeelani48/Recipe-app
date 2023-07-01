@@ -23,7 +23,7 @@
 
 <div class="recipe-buttons">
   <% if user_signed_in? %>
-  <%= link_to "Generate Shopping List", shopping_lists_path(recipe_id: @recipe.id), class: "action-button", method: :get %>
+  <%= link_to "Generate Shopping List", shopping_lists_path, class: "action-button", method: :get %>
 <% end %>
 
   <% if @recipe.user == @current_user %>
