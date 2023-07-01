@@ -124,12 +124,6 @@ rails server
 - Twitter: [@lawrah_on_Twitter](https://twitter.com/lawrah_xo)
 - LinkedIn: [@laura_on_LinkedIn](https://www.linkedin.com/in/amakalaurakonwea/)
 
-👤 **Ajayi Ridwan**
-
-- GitHub: [@Ridwanullahi-code](https://github.com/Ridwanullahi-code)
-- Twitter: [@Ridwanullahi22](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ajayi-ridwan/)
-
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Add some styles of the project**
