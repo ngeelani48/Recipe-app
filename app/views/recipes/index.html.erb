@@ -1,0 +1,19 @@
+<h1>My Recipes</h1>
+
+<div class="add-recipe-button">
+  <%= link_to 'Add New Recipe', new_recipe_path, class: 'action-button' %>
+</div>
+<div class="recipe-cards-container">
+<% @recipes.each do |recipe| %>
+  <div class="recipe-card">
+   <div class="recipe-actions">
+    <h2><%= recipe.name %></h2>
+    <div class="recipe-btns">
+      <%= link_to 'View Recipe', recipe, class: 'action-button' %>
+      <%= button_to 'Delete Recipe', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
+    </div> 
+    </div>
+    <p><strong>Description:</strong> <%= recipe.description %></p> 
+  </div>
+<% end %>
+</div>

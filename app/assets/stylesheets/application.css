@@ -1,0 +1,402 @@
+
+/* Styles for Log in page */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.login-form {
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  margin: 2%;
+  text-align: center;
+}
+
+.form-field {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.remember-me-checkbox {
+  margin-right: 5px;
+}
+
+.remember-me-label {
+  font-size: 14px;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #23527c;
+}
+
+.form-links {
+  text-decoration: underline;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* Styles for the recipe card */
+.add-recipe-button {
+  padding-left: 82%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.recipe-cards-container {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe-card {
+  border: 1px solid #ccc;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  gap: 5rem;
+}
+
+.recipe-card h2 {
+  margin-bottom: 5px;
+}
+
+.recipe-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.recipe-btns {
+  display: flex;
+}
+
+.action-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #337ab7;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+
+.delete-button {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: crimson;
+}
+
+/* style for public recipe */
+.public-recipe-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  padding-left: 10%;
+  margin-bottom: 20px;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  gap: 40%;
+}
+
+/* Styles for the NavBar */
+
+.nav-group {
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #337ab7;
+  padding: 0 2%;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  padding: 0 1%;
+}
+
+.btn,
+.user-info {
+  color: #fff;
+}
+
+/* Styles for foods */
+
+.food-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.food-table th,
+.food-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.food-table th {
+  background-color: #f5f5f5;
+}
+
+.food-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.food-table tr:hover {
+  background-color: #ebebeb;
+}
+
+.add-food {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.add-food:hover {
+  background-color: #45a049;
+}
+
+.delete-food:hover {
+  cursor: pointer;
+  background-color: crimson;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.alert {
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.food-field {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.food-button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-link {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* styling recipe details */
+.recipe-container {
+  margin-left: 6rem;
+}
+
+.recipe-details h1 {
+  text-align: center;
+}
+
+.public {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+}
+
+.public-checkbox {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-left: 10px;
+  background-color: #ccc;
+  border-radius: 20px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.public-checkbox:checked + .slider {
+  background-color: #2196f3;
+}
+
+.public-checkbox:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.recipe-label-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.recipe-buttons {
+  display: flex;
+  text-align: center;
+  align-content: space-between;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 3rem;
+  gap: 40%;
+}
+
+.recipe-table {
+  margin: 0 auto;
+  margin-top: 4rem;
+  text-align: center;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+.recipe-table th,
+.recipe-table td {
+  font-weight: bold;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.recipe-table th {
+  background-color: #f2f2f2;
+}
+
+.recipe-table .action-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* styles for shopping list */
+.shopping-list-wrapper {
+  width: 100%;
+}
+
+.shopping-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shopping-list-title {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.shopping-list-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.shopping-list-summary-item {
+  flex-basis: 50%;
+}
+
+.shopping-list-info {
+  font-weight: bold;
+}
+
+.shopping-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shopping-list-table th,
+.shopping-list-table td {
+  padding: 0.5rem;
+  border: 1px solid #000;
+}
+
+.shopping-list-table-cell {
+  text-align: center;
+}
+
+/* Moved here to fix linters */
+.food-table tr:last-child td {
+  border-bottom: none;
+}

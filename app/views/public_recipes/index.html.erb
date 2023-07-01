@@ -1,0 +1,25 @@
+<section>
+  <h1>Public Recipes</h1>
+  <% if @recipes.nil? || @recipes.empty? %>
+    <p>No public recipes.</p>
+  <% else %>
+  <div class="recipe-cards-container">
+    <% @recipes.each do |recipe| %>
+      <div class="public-recipe-card">
+      <div class="public-recipe-details">
+          <h3><%= link_to recipe.name, recipe %></h3>
+          <p>By: <%= recipe.user.name %></p>
+         </div>
+         <div class="public-recipe-foods">
+          <h5>Total food items: <%= recipe.recipe_foods.length %> </h5>
+          <% sum = 0 %>
+          <h5>Total price: $<% recipe.recipe_foods.each do |food| %>
+            <% sum += food.food.price %>
+          <% end %>
+          <%= sum %></h5>
+          </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</section>

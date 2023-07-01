@@ -1,0 +1,49 @@
+<div class="recipe-container">
+  <div class="recipe-details">
+    <h1><%= @recipe.name %></h1>
+    <p><strong>Preparation Time:</strong> <%= @recipe.preparation_time %> minutes</p>
+    <p><strong>Cooking Time:</strong> <%= @recipe.cooking_time %> minutes</p>
+    <p><strong>Description:</strong> <%= @recipe.description %></p>
+    <p><strong>Public:</strong> <%= @recipe.public ? 'Yes' : 'No' %></p>
+  </div>
+    <%= link_to 'Back to Recipes', recipes_path, class: 'action-button' %>
+</div>
+
+<div class="public">
+  <% if @recipe.user_id == current_user.id %>
+    <%= form_for @recipe, url: recipe_path(@recipe), method: :patch, class: "form-public" do |f| %>
+      <label class="label-public">
+        <%= f.check_box :public, class: "public-checkbox", checked: @recipe.public, onclick: "this.form.submit();" %>
+        <span class="slider round"></span>
+        <p class="recipe-label-text">Public</p>
+      </label>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="recipe-buttons">
+  <% if user_signed_in? %>
+  <%= link_to "Generate Shopping List", shopping_lists_path, class: "action-button", method: :get %>
+<% end %>
+
+  <% if @recipe.user == @current_user %>
+    <%= button_to "Add Ingredients", new_recipe_recipe_food_path(@recipe.id), method: :get, class: "action-button" %>
+  <% end %>
+</div>
+
+<hr>
+<table class="recipe-table">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <% if @recipe.user == current_user %>
+        <th>Action</th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "recipe_foods/index", locals: { recipe_foods: @recipe.recipe_foods } %>
+  </tbody>
+</table>
