@@ -65,13 +65,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+To run this project you need:
 
 - Code Editor (Vs Code)
 
 - Terminal
 
-- Install ruby on your computer
+- Install Ruby on your computer
 
 - Install rails on your computer
 
@@ -105,7 +105,7 @@ rails server
 ### Test
 
 ```sh
-  rspec
+  RSpec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -143,13 +143,13 @@ Feel free to check the [issues page](https://github.com/ngeelani48/Recipe-app/is
 
 ## ⭐️ Show your support <a name="support"></a>
 
-Leave a star if you like the project.
+Please feel free to leave a star if you like the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for the project.
+I want to thank Microverse for the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
